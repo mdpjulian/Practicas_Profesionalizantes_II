@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "Student.hpp"
 #include "Course.hpp"
 
@@ -10,13 +11,12 @@ using namespace std;
 
 class AttendanceManagement
 {
-    private:
+private:
+public:
+    AttendanceManagement();
+    virtual ~AttendanceManagement();
 
-    public:
-        AttendanceManagement();
-        virtual ~AttendanceManagement();
-
-        void showAttendance(Student* student, Course* course, string datetime, bool state);
+    void takeAttendance(Student *student, Course *course, string datetime, bool state);
 };
 
 #endif // ATTENDANCE_MANAGEMENT_H
